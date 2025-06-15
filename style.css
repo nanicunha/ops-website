@@ -91,24 +91,28 @@ li {
   font-size: 1.1em;
 }
 
-/* === PORTFOLIO GRID === */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.grid img {
-  width: 100%;
+/* === PORTFOLIO CARD === */
+#portfolio .card {
+  background: white;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
-.grid img:hover {
+#portfolio .card:hover {
   transform: scale(1.05);
 }
+
+#portfolio .card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  /* Corta e ajusta para encaixar no tamanho fixo */
+}
+
 
 /* === WHATSAPP BUTTON === */
 .whatsapp-float {
