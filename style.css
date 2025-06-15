@@ -1,28 +1,146 @@
+/* === GLOBAL === */
 body {
-	padding: 2rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(-45deg, #d0c5f7, #f8d8ee, #fbe7b2, #c7f7ed, #c5e1f7);
+  background-size: 500% 500%;
+  animation: gradientBG 15s ease infinite;
+  scroll-behavior: smooth;
 }
 
-h1 {
-	font-size: 16px;
-	margin-top: 0;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-p {
-	color: rgb(107, 114, 128);
-	font-size: 15px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+h1, h2, h3 {
+  color: #333350;
 }
 
-.card {
-	max-width: 620px;
-	margin: 0 auto;
-	padding: 16px;
-	border: 1px solid lightgray;
-	border-radius: 16px;
+p, li {
+  color: #4a4a6a;
+  line-height: 1.6;
 }
 
-.card p:last-child {
-	margin-bottom: 0;
+/* === MENU === */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.6em;
+  color: #7a5df1;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333350;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #7a5df1;
+}
+
+/* === SECTION === */
+section {
+  max-width: 1000px;
+  margin: 120px auto;
+  padding: 60px 40px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+li {
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+/* === PORTFOLIO GRID === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+}
+
+/* === WHATSAPP BUTTON === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  font-size: 0.9em;
 }
